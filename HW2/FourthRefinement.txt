@@ -1,0 +1,31 @@
+(HW2)Fourth refinement of Pseudocode:
+Initialize an int variable that represents the lowest possible number to 0
+Initialize an int variable that represent the highest possible number to 100
+Initialize a Boolean variable, which represents if we’ve achieved the correct guess, to false
+Initialize an int variable, where we store the number of guesses we’ve made, to 0
+Declare an int variable in which to store an initial guess
+Declare an int variable to store user input
+Initialize a Scanner object and name the variable you assign it to “input”
+
+Prompt the user to choose a number
+
+Make an initial guess and store it.
+Increment the value in the variable storing number of guesses.
+
+Present guess to the user
+Present prompt to user (“Enter 1 if this was a correct guess, 2 if your number is higher, and 3 if your number is lower:”)
+
+While we haven’t guessed the correct number (correctGuess == false)
+	Use Scanner to grab the nextInt() the user types in, and store it
+	If the user has typed in a "2" (goHigher)
+		Find the midway between the current guess and the highest number
+		Present guess to the user
+		Present prompt to user (“Enter 1 if this was a correct guess, 2 if your number is higher, and 3 if your number is lower:”)
+	Else if the user has typed in a "3" (goLower)
+		Find the midway between the current guess and the lowest number
+		Present guess to the user
+		Present prompt to user (“Enter 1 if this was a correct guess, 2 if your number is higher, and 3 if your number is lower:”
+	Else if user has typed in a "1" (correct)
+		Set boolean value (correctGuess) to true
+		Print tries to user
+	Increment counter by 1
