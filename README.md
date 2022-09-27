@@ -1,6 +1,6 @@
 ## Table of Contents:
 ### HW1: Hello World!
-The typical Hello World! code.
+The typical "Hello World!" code.
 
 ### HW2: Higher/Lower
 A program that guesses a number (you think of one first); if the computer is wrong, you tell it that your number is higher or lower until it guesses correctly. This assignment taught us how to intake & process user input, how to use while loops, and how to implement if/else statements.
