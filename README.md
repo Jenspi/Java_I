@@ -19,3 +19,9 @@ The user travels through an art museum, where each room has its own description.
 
 ### HW7: Art Museum (but with enemies!)
 Our Art Museum assignment but with inheritance! This brought the addition of enemies & friendlies, as well as interacive items to defend oneself and an inventory.
+
+---
+### Course Information:
+Fall 2019 @ (The) University of New Orleans
+
+CSCI 1583 (Software Development I) with Dr. Samuel
