@@ -4,6 +4,7 @@ The typical "Hello World!" code.
 
 ### HW2: Higher/Lower
 A program that guesses a number (you think of one first); if the computer is wrong, you tell it that your number is higher or lower until it guesses correctly. This assignment taught us how to intake & process user input, how to use while loops, and how to implement if/else statements.
+![](HW2/hw2_improved_art.png)
 
 ### HW3: Combinations
 Hard-coded program finding the number of ways one hundred people can be put into a group of four. A bonus file that does the same, but with five people instead. Although it's not the best way to go about this problem, this assignment was to get us familiar with for loops.
