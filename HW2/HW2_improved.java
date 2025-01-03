@@ -16,11 +16,13 @@ public class HW2_improved{
     String winning_try = " tries";
 
     System.out.println(ANSI.ANSI_CLEAR);
+    System.out.print(ANSI.ANSI_RESET);
     wrapper(cpu_guess);
 
     while(guessedCorrectly==false){
         userInput = input.nextInt();
         if(userInput < 1 || userInput > 3){
+          System.out.printf("%s", ANSI.ANSI_RESET);
           System.out.println("Sorry, here are your only options:\n1 = Correct, 2 = higher, 3 = lower. Try again.");
         }
         else{
@@ -30,10 +32,12 @@ public class HW2_improved{
             if(tries==1){
               winning_try = " try";
             }
-            System.out.println("Sweet, I got it in " + tries + winning_try + "!");
+            System.out.printf("%s", ANSI.ANSI_RESET);
+            System.out.printf("Sweet, I got it in %d%s!s", tries, winning_try,ANSI.ANSI_RESET);
           }
           else{
             cpu_guess = midpoint(userInput, cpu_guess);
+            System.out.print(ANSI.ANSI_RESET);
             wrapper(cpu_guess);
           }
             tries++;
@@ -46,7 +50,8 @@ public class HW2_improved{
 
     if(userInt==goHigher)//Use variables here so that an int == another int
     {
-      if(cpu_guess>=100){
+      if(cpu_guess==100){
+        System.out.printf("%s", ANSI.ANSI_RESET);
         System.out.println("Can't go higher than 100! Try again...");
         return cpu_guess;
       }
@@ -55,7 +60,8 @@ public class HW2_improved{
       cpu_guess = lower+(upper-lower)/2;
     }
     else if(userInt==goLower){
-      if(cpu_guess<=1){
+      if(cpu_guess==1){
+        System.out.printf("%s", ANSI.ANSI_RESET);
         System.out.println("Can't go lower than 1! Try again...");
         return cpu_guess;
       }
@@ -68,39 +74,40 @@ public class HW2_improved{
 
   private static void wrapper(int cpu_guess){
     int spaces = 24 - (int) (Math.log10(cpu_guess) + 1);
+    System.out.print(ANSI.ANSI_RESET);
     System.out.println(ANSI.ANSI_CLEAR);
-    System.out.println("                        ________________________________________________       ");
-    System.out.println("                       /                                                \\       ");
-    System.out.println("                      |    _________________________________________     |        ");
-    System.out.println("                      |   |                                         |    |         ");
-    System.out.println("                      |   |  Pick a number in your head.            |    |              ");
-    System.out.println("                      |   |  I will guess it,                       |    |              ");
-    System.out.println("                      |   |  and you give me a number:              |    |                ");
-    System.out.println("                      |   |                                         |    |             ");
-    System.out.println("                      |   |  1 = CORRECT                            |    |                ");
-    System.out.println("                      |   |  2 = GO HIGHER                          |    |                  ");
-    System.out.println("                      |   |  3 = GO LOWER                           |    |                 ");
-    System.out.println("                      |   |                                         |    |             ");
-    System.out.printf("                      |   |  My guess is... %d%s|    |                   \n", cpu_guess, " ".repeat(spaces));
-    System.out.println("                      |   |                                         |    |                 ");
-    System.out.println("                      |   |  C:\\> _                                 |    |              ");
-    System.out.println("                      |   |                                         |    |                   ");
-    System.out.println("                      |   |                                         |    |                  ");
-    System.out.println("                      |   |                                         |    |                   ");
-    System.out.println("                      |   |_________________________________________|    |                   ");
-    System.out.println("                      |                                                  |                   ");
-    System.out.println("                      \\_________________________________________________/             ");
-    System.out.println("                              \\___________________________________/                 ");
-    System.out.println("                           ___________________________________________                  ");
-    System.out.println("                        _-'    .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.  --- `-_                  ");
-    System.out.println("                     _-'.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--.  .-.-.`-_              ");
-    System.out.println("                  _-'.-.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-`__`. .-.-.-.`-_               ");
-    System.out.println("               _-'.-.-.-.-. .-----.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-----. .-.-.-.-.`-_                ");
-    System.out.println("            _-'.-.-.-.-.-. .---.-. .-------------------------. .-.---. .---.-.-.-.`-_              ");
-    System.out.println("           :-------------------------------------------------------------------------:             ");
-    System.out.println("           `---._.-------------------------------------------------------------._.---'           ");   
-    System.out.println("                                 ASCII Credit: Roland Hangg              ");
-    System.out.print("C:\\> _ ");
+    System.out.printf("                        %s________________________________________________%s       \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_RESET);
+    System.out.printf("                       %s%s/                                                \\%s       \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|    %s_________________________________________%s     |%s        \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_WHITE, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s                                         %s|    |%s         \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_BG_BLACK, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s%s  Pick a number in your head.            %s%s|    |%s              \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_BG_BLACK, ANSI.ANSI_GREEN, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s%s  I will guess it,                       %s%s|    |%s              \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_BG_BLACK, ANSI.ANSI_GREEN, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s%s  and you give me a number:              %s%s|    |%s                \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_BG_BLACK, ANSI.ANSI_GREEN, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s%s                                         %s%s|    |%s             \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_BG_BLACK, ANSI.ANSI_GREEN, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s%s  1 = CORRECT                            %s%s|    |%s                \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_BG_BLACK, ANSI.ANSI_GREEN, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s%s  2 = GO HIGHER                          %s%s|    |%s                  \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_BG_BLACK, ANSI.ANSI_GREEN, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s%s  3 = GO LOWER                           %s%s|    |%s                 \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_BG_BLACK, ANSI.ANSI_GREEN, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s%s                                         %s%s|    |%s             \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_BG_BLACK, ANSI.ANSI_GREEN, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s%s  My guess is... %s%d%s%s%s|    |%s                   \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_BG_BLACK, ANSI.ANSI_GREEN, ANSI.ANSI_BRIGHT_MAGENTA, cpu_guess, " ".repeat(spaces), ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s%s                                         %s%s|    |%s                 \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_BG_BLACK, ANSI.ANSI_GREEN, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s%s  C:\\> %s%s_%s%s                                 %s%s|    |%s              \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_GREEN, ANSI.ANSI_BG_BLACK, ANSI.ANSI_BOLD, ANSI.ANSI_BLINK, ANSI.ANSI_NOT_BOLD, ANSI.ANSI_NOT_BLINK, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s%s                                         %s%s|    |%s                   \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_BG_BLACK, ANSI.ANSI_GREEN, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s%s                                         %s%s|    |%s                  \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_BG_BLACK, ANSI.ANSI_GREEN, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s%s                                         %s%s|    |%s                   \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_BG_BLACK, ANSI.ANSI_GREEN, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|   |%s%s_________________________________________%s%s|    |%s                   \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_BG_BLACK, ANSI.ANSI_WHITE, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s|                                                  |%s                   \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                      %s%s\\_________________________________________________/%s             \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                              %s%s\\___________________________________/%s                 \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                           %s___________________________________________%s                  \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_RESET);
+    System.out.printf("                        %s%s_-'    .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.  --- `-_%s                  \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                     %s%s_-'.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.--.  .-.-.`-_%s              \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("                  %s%s_-'.-.-.-. .---.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-`__`. .-.-.-.`-_%s               \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("               %s%s_-'.-.-.-.-. .-----.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-----. .-.-.-.-.`-_%s                \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("            %s%s_-'.-.-.-.-.-. .---.-. .-------------------------. .-.---. .---.-.-.-.`-_%s              \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("           %s%s:-------------------------------------------------------------------------:%s             \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);
+    System.out.printf("           %s%s`---._.-------------------------------------------------------------._.---'%s           \n", ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_BG_WHITE, ANSI.ANSI_RESET);   
+    System.out.printf("                                 %s%sASCII Credit: Roland Hangg%s              \n", ANSI.ANSI_ITALIC, ANSI.ANSI_BRIGHT_GREY, ANSI.ANSI_RESET);
+    System.out.printf("%s%s%sC:\\> ", ANSI.ANSI_BOLD, ANSI.ANSI_GREEN, ANSI.ANSI_BG_BLACK);
   }//end wrapper()
 
   // private static void smallPC(){
