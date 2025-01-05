@@ -33,7 +33,7 @@ public class HW2_improved{
               winning_try = " try";
             }
             System.out.printf("%s", ANSI.ANSI_RESET);
-            System.out.printf("Sweet, I got it in %d%s!s", tries, winning_try,ANSI.ANSI_RESET);
+            System.out.printf("Sweet, I got it in %d%s!", tries, winning_try,ANSI.ANSI_RESET);
           }
           else{
             cpu_guess = midpoint(userInput, cpu_guess);
