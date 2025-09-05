@@ -6,6 +6,8 @@ This is an algorithm where the computer guesses YOUR number. The computer will g
 
 To run this program, run the command "javac GuessingGame.java" in your terminal to compile the file. Then, in the same terminal, run the command "java GuessingGame" to run the program.
 
+RUN: ADDITIONALLY, SIMPLY RUN THE .COMMAND FILE ON MACOSX.
+
 ⋆ ˚｡⋆୨୧˚　˚୨୧⋆｡˚ ⋆⋆ ˚｡⋆୨୧˚　˚୨୧⋆｡˚ ⋆⋆ ˚｡⋆୨୧˚　˚୨୧⋆｡˚ ⋆⋆ ˚｡⋆୨୧˚　˚୨୧⋆｡˚ ⋆⋆ ˚｡⋆୨୧˚　˚୨୧⋆｡˚ ⋆
 
 Comment(s):
