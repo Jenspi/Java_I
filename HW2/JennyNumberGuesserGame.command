@@ -8,6 +8,7 @@ ROWS=37
 osascript <<EOF
 tell application "Terminal"
     activate
+    set custom title of front window to "Number Guessing Game – Jenny Spicer 2019/2025"
     set bounds of front window to {100, 100, 1000, 700}
     set number of rows of front window to $ROWS
     set number of columns of front window to $COLUMNS
