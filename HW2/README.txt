@@ -4,9 +4,14 @@ Hello!
 
 This is an algorithm where the computer guesses YOUR number. The computer will guess your number— if it is wrong, tell the computer whether your number is less than or greater than the number it guessed. You must be honest.
 
-To run this program, run the command "javac GuessingGame.java" in your terminal to compile the file. Then, in the same terminal, run the command "java GuessingGame" to run the program.
+For running the program:
+MACOSX:
+To run this program, run the .command file by double-clicking it. It will then open a terminal with the game! ◕ ◡ ◕
 
-RUN: ADDITIONALLY, SIMPLY RUN THE .COMMAND FILE ON MACOSX.
+WINDOWS:
+To run this program, run the command "javac HW2_improved.java ANSI.java" in your terminal to compile the file. Then, in the same terminal, run the command "java HW2_improved" to run the program. ✿◕ ‿ ◕✿
+
+RUN: ADDITIONALLY, SIMPLY RUN THE .COMMAND FILE ON MACOSX. (All you need for distribution is the .jar and .command files)
 
 ⋆ ˚｡⋆୨୧˚　˚୨୧⋆｡˚ ⋆⋆ ˚｡⋆୨୧˚　˚୨୧⋆｡˚ ⋆⋆ ˚｡⋆୨୧˚　˚୨୧⋆｡˚ ⋆⋆ ˚｡⋆୨୧˚　˚୨୧⋆｡˚ ⋆⋆ ˚｡⋆୨୧˚　˚୨୧⋆｡˚ ⋆
 
