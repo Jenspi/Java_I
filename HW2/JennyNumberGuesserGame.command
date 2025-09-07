@@ -2,7 +2,7 @@
 
 # Desired dimensions
 COLUMNS=100
-ROWS=30
+ROWS=37
 
 # Resize the front Terminal window
 osascript <<EOF
@@ -27,10 +27,10 @@ if ! command -v figlet &> /dev/null; then
         exit 1
     fi
     brew install figlet
-    figlet -cf isometric3 "JENNY SPICER"
+    figlet -cf isometric3 -w 100 "JENNY SPICER"
 else
     # figlet installed
-    figlet -cf isometric3 "JENNY SPICER"
+    figlet -cf isometric3 -w 100 "JENNY SPICER"
 fi
                 
 ### Run JAR ###                                                                                                                       
