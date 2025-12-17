@@ -8,6 +8,8 @@ A program that guesses a number (you think of one first); if the computer is wro
 
 ### HW3: Combinations
 Hard-coded program finding the number of ways one hundred people can be put into a group of four. A bonus file that does the same, but with five people instead. Although it's not the best way to go about this problem, this assignment was to get us familiar with for loops.
+![](./HW3/combinations-1-output.png)
+![](./HW3/bonus-1-output.png)
 
 ### HW4: Virtual Pet
 A tamagotchi-style program where you "find" a kitten, name it, and then take care of it. I chose for the animal to be a kitten based on my beloved cat, June (I'm writing this readme four years post-assignment, and she has since passed away around two years ago. It warmed my heart to see that I included my dad's nickmane for her in my code, so I wanted to mention it here). The program keeps tracks of all of all statistics and pets that you find. This assignment had us practice arrays, constant variables, and implementing & calling our own written methods.
